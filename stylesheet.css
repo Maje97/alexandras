@@ -1,0 +1,82 @@
+* {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+body {
+    background-color: aliceblue;
+    margin: 0;
+    padding: 0;
+}
+
+#gridcontainer {
+    display: grid;
+    width: 100vw;
+    height: 100vh;
+    grid-template: repeat(8, 12.5%)/repeat(4, 1fr);
+    grid-template-areas: 
+        "header header header header"
+        "aside1 main main aside2"
+        "aside1 main main aside2"
+        "aside1 main main aside2"
+        "aside1 main main aside2"
+        "aside1 main main aside2"
+        "aside1 main main aside2"
+        "footer footer footer footer";
+}
+
+header {
+    grid-area: header/header;
+    align-self: self-start;
+    display: flex;
+    padding: 20px;
+    justify-content: end;
+    background-color: aquamarine;
+}
+
+#sitename {
+    position: absolute;
+    left: 20px;
+    margin-top: 0;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: large;
+    font-weight: bolder;
+}
+
+.mobilenav {
+    display: none;
+}
+
+#nav a {
+    padding: 10px;
+}
+
+#nav a:hover {
+    background-color: aliceblue;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+#reklam {
+    grid-area: aside1/aside1;
+    background-color: aquamarine;
+}
+
+main {
+    grid-area: main/main;
+}
+
+#about {
+    grid-area: aside2/aside2;
+    background-color: aquamarine;
+}
+
+footer {
+    grid-area: footer/footer;
+    align-self: self-end;
+    padding: 10px;
+    background-color: aquamarine;
+}
+
+@media (max-width: 768) {
+    
+}
