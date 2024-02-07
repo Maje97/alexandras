@@ -25,7 +25,7 @@ body {
 }
 
 header {
-    grid-area: header/header;
+    grid-area: header;
     align-self: self-start;
     display: flex;
     padding: 20px;
@@ -57,26 +57,87 @@ header {
 }
 
 #reklam {
-    grid-area: aside1/aside1;
-    background-color: aquamarine;
+    grid-area: aside1;
+    justify-self: center;
+    align-self: center;
 }
 
 main {
-    grid-area: main/main;
+    grid-area: main;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+main video {
+    max-width: 500px;
+    min-width: 40vw;
 }
 
 #about {
-    grid-area: aside2/aside2;
+    grid-area: aside2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
     background-color: aquamarine;
 }
 
+#mepic img {
+    width: 150px;
+}
+
+#about:last-child {
+    flex-grow: 1;
+}
+
 footer {
-    grid-area: footer/footer;
+    grid-area: footer;
     align-self: self-end;
     padding: 10px;
     background-color: aquamarine;
 }
 
-@media (max-width: 768) {
-    
+/*Adopt pet*/
+#adoptpetcanvas {
+    height: 500px;
+    width: 500px;
+    background-color: black;
+}
+
+main form {
+    display: grid;
+    grid-template: repeat(3, 25%)/repeat(4, 25%);
+    grid-gap: 2px;
+    width: 500px;
+    height: 100px;
+}
+
+#submitbttn {
+    grid-area: 3/2/4/4;
+    justify-self: center;
+    width: 60px;
+}
+
+@media (max-width: 768px) {
+    #gridcontainer {
+        grid-template-areas: 
+            "header header header header"
+            "aside1 aside1 aside1 aside1"
+            "main main main main"
+            "main main main main"
+            "main main main main"
+            "aside2 aside2 aside2 aside2"
+            "aside2 aside2 aside2 aside2"
+            "footer footer footer footer";
+    }
+
+    #oatly {
+        transform: rotate(90deg);
+    }
+
+    #about {
+        flex-direction: row;
+    }
 }

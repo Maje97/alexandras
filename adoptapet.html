@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="stylesheet.css">
+</head>
+<body>
+    <div id="gridcontainer">
+        <header>
+            <p id="sitename">Alexandras</p>
+            <input class="mobilenav" id="dropdown" type="checkbox">
+            <label class="mobilenav" for="dropdown"><img src="bilder/menu.png"></label>
+            <div id="nav">
+                <a>Hem</a>
+                <a>Kontakt</a>
+            </div>
+        </header>
+
+        <main>
+            <canvas id="adoptpetcanvas"></canvas>
+            <form>
+                <label for="choosepet">Katt:</label>
+                <label for="bakgrund">Bakgrund:</label>
+                <label for="toy">Leksak:</label>
+                <label for="bed">Bädd:</label>
+
+                <input id="choosepet" list="pets">
+                <datalist id="pets">
+                    <option>Röd</option>
+                    <option>Vit</option>
+                    <option>Svart</option>
+                    <option>Sköldpadd</option>
+                </datalist>
+                
+                <input id="bakgrund" list="bakgrunder">
+                <datalist id="bakgrunder">
+                    <option></option>
+                    <option></option>
+                    <option></option>
+                </datalist>
+
+                <input id="toy" list="toys">
+                <datalist id="toys">
+                    <option></option>
+                    <option></option>
+                    <option></option>
+                </datalist>
+
+                <input id="bed" list="beds">
+                <datalist id="beds">
+                    <option></option>
+                    <option></option>
+                    <option></option>
+                </datalist>
+
+                <input id="submitbttn" type="submit" value="Submit">
+            </form>
+        </main>
+
+        <footer>
+            <a href="https://www.flaticon.com/free-icons/ui" title="ui icons">Ui icons created by Fathema Khanom - Flaticon</a>
+        </footer>
+    </div>
+</body>
+</html>
