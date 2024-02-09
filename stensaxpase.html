@@ -23,7 +23,21 @@
         </aside>
 
         <main>
-            <video controls src="video/20231225_102141.mp4"></video>
+            <h1>Sten Sax Påse</h1>
+            <img src="bilder-ssp/rock-paper-scissors.png" alt="rock paper scissors" class="game-logo">
+            <p>Helt vanliga sten, sax, påse. Sten vinner över sax, sax vinner över påse och påse vinner över sten.</p>
+    
+            <div class="moves">
+                <button class="move-button" onclick="startaSpel('sten')"><img class="img-move" alt="rock" src="bilder-ssp/270A-1F3FB_color.png"></button>
+                <button class="move-button" onclick="startaSpel('sax')"><img class="img-move" alt="scissor" src="bilder-ssp/270C-1F3FD_color.png"></button>
+                <button class="move-button" onclick="startaSpel('påse')"><img class="img-move" alt="paper" src="bilder-ssp/270B-1F3FF_color.png"></button>
+            </div>
+    
+            <p class="js-resultat css-resultat">Resultat</p>
+            <p class="js-moves css-moves">Du valde ..., spelet valde...</p>
+            <p class="js-score css-score">Vinster: 0 Förluster: 0 Oavgjort: 0</p>
+    
+            <button class="återställ" onclick="aterstall()">Återställ</button>
         </main>
 
         <aside id="about">
@@ -42,5 +56,7 @@
             <a href="https://www.flaticon.com/free-icons/ui" title="ui icons">Ui icons created by Fathema Khanom - Flaticon</a>
         </footer>
     </div>
+
+    <script src="stensaxpase.js"></script>
 </body>
 </html>

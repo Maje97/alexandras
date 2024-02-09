@@ -12,13 +12,9 @@ body {
     display: grid;
     width: 100vw;
     height: 100vh;
-    grid-template: repeat(8, 12.5%)/repeat(4, 1fr);
+    grid-template: 55px repeat(3, 1fr)/repeat(4, 1fr);
     grid-template-areas: 
         "header header header header"
-        "aside1 main main aside2"
-        "aside1 main main aside2"
-        "aside1 main main aside2"
-        "aside1 main main aside2"
         "aside1 main main aside2"
         "aside1 main main aside2"
         "footer footer footer footer";
@@ -63,6 +59,7 @@ header {
 }
 
 main {
+    height: 750px;
     grid-area: main;
     display: flex;
     flex-direction: column;
@@ -97,6 +94,37 @@ footer {
     align-self: self-end;
     padding: 10px;
     background-color: aquamarine;
+}
+
+/*Sten Sax Påse*/
+.game-logo {
+    display: block;
+    height: 200px;
+}
+
+.moves {
+    width: 300px;
+}
+
+.move-button {
+    width: 90px;
+    padding: 5px;
+    background-color: transparent;
+    cursor: pointer;
+    border: 2px solid #512d38;
+    border-radius: 45px;
+}
+
+.img-move {
+    width: 80px;
+}
+
+.css-resultat {
+    font-size: x-large;
+}
+
+.css-moves, .css-score {
+    font-size: medium;
 }
 
 /*Adopt pet*/
