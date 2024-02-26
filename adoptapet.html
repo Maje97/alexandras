@@ -9,13 +9,18 @@
 <body>
     <div id="gridcontainer">
         <header>
-            <p id="sitename">Alexandras</p>
-            <input class="mobilenav" id="dropdown" type="checkbox">
-            <label class="mobilenav" for="dropdown"><img src="bilder/menu.png"></label>
-            <div id="nav">
-                <a>Hem</a>
-                <a>Kontakt</a>
-            </div>
+            <nav id="navpc">
+                <p id="sitename">Alexandras</p>
+                <div id="navbttns">
+                    <a href="index.html" target="_self">Hem</a>
+                    <a href="stensaxpase.html" target="_self">Sten Sax Påse</a>
+                </div>
+            </nav>
+
+            <nav id="navmobile">
+                <button onmouseenter="mobileMenu()" onclick="mobileMenu()" class="dropbtn"><img src="bilder/menu.png"></button>
+                <div onmouseleave="eraseMenu()" class="droplinks"></div>
+            </nav>
         </header>
 
         <main>
@@ -26,42 +31,57 @@
                 <label for="toy">Leksak:</label>
                 <label for="bed">Bädd:</label>
 
-                <input id="choosepet" list="pets">
+                <input id="choosepet" list="pets" placeholder="Katt" oninput="ChangeCat(this.value)">
                 <datalist id="pets">
-                    <option>Röd</option>
-                    <option>Vit</option>
-                    <option>Svart</option>
-                    <option>Sköldpadd</option>
+                    <option value="Vit"></option>
+                    <option value="Röd"></option>
+                    <option value="Sköldpadd"></option>
                 </datalist>
                 
-                <input id="bakgrund" list="bakgrunder">
+                <input id="bakgrund" list="bakgrunder" placeholder="Bakgrund" oninput="ChangeBakgrund(this.value)">
                 <datalist id="bakgrunder">
-                    <option></option>
-                    <option></option>
-                    <option></option>
+                    <option value="Rosa"></option>
+                    <option value="Blå"></option>
+                    <option value="Grön"></option>
                 </datalist>
 
-                <input id="toy" list="toys">
+                <input id="toy" list="toys" placeholder="Leksak" oninput="ChangeToy(this.value)">
                 <datalist id="toys">
-                    <option></option>
-                    <option></option>
-                    <option></option>
+                    <option value="Fjäril"></option>
+                    <option value="Mus"></option>
+                    <option value="Boll"></option>
                 </datalist>
 
-                <input id="bed" list="beds">
+                <input id="bed" list="beds" placeholder="Bädd" oninput="ChangeBed(this.value)">
                 <datalist id="beds">
-                    <option></option>
-                    <option></option>
-                    <option></option>
+                    <option value="Låda"></option>
+                    <option value="Korg"></option>
+                    <option value="Kudde"></option>
                 </datalist>
 
-                <input id="submitbttn" type="submit" value="Submit">
+                <button type="reset" id="resetbttn">Reset</button>
             </form>
         </main>
+
+        <aside id="about">
+            <div id="mepic">
+                <h2>Om Alexandra</h2>
+                <img src="bilder/20230829_184059~2.jpg" alt="jag">
+            </div>
+            <p>
+                Namn: Alexandra Eriksson <br>
+                Ålder: 26 <br>
+                <br>
+                Jag studerar till att bli fullstack-utvecklare på företagsuniversitetet. 
+            </p>
+        </aside>
 
         <footer>
             <a href="https://www.flaticon.com/free-icons/ui" title="ui icons">Ui icons created by Fathema Khanom - Flaticon</a>
         </footer>
     </div>
+
+    <script src="adoptapet.js"></script>
+    <script src="interactive.js"></script>
 </body>
 </html>

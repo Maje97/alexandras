@@ -12,11 +12,11 @@ body {
     display: grid;
     width: 100vw;
     height: 100vh;
-    grid-template: 55px repeat(3, 1fr)/repeat(4, 1fr);
+    grid-template: 65px auto auto 60px/repeat(4, 1fr);
     grid-template-areas: 
         "header header header header"
-        "aside1 main main aside2"
-        "aside1 main main aside2"
+        "main main main aside"
+        "main main main aside"
         "footer footer footer footer";
 }
 
@@ -26,7 +26,7 @@ header {
     display: flex;
     padding: 20px;
     justify-content: end;
-    background-color: aquamarine;
+    background-color: plum;
 }
 
 #sitename {
@@ -38,32 +38,50 @@ header {
     font-weight: bolder;
 }
 
-.mobilenav {
+#navmobile {
     display: none;
 }
 
-#nav a {
-    padding: 10px;
+#navmobile .dropbtn {
+    border: none;
+    background-color: plum;
 }
 
-#nav a:hover {
-    background-color: aliceblue;
+#navmobile .dropbtn img {
+    height: 50px;
+    width: 50px;
+}
+
+#navmobile .droplinks {
+    position: absolute;
+    border: 1px solid black;
+}
+
+#navmobile .droplinks a {
+    display: block;
+    color: black;
+    font-size: large;
+    text-decoration: underline;
+    background-color: lavenderblush;
+}
+
+#navbttns a {
+    padding: 10px;
+    color: black;
+    text-decoration: none;
+}
+
+#navbttns a:hover {
+    background-color: lavenderblush;
     border-radius: 15px;
     cursor: pointer;
 }
 
-#reklam {
-    grid-area: aside1;
-    justify-self: center;
-    align-self: center;
-}
-
 main {
-    height: 750px;
     grid-area: main;
+    padding-top: 20px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
 }
 
@@ -73,27 +91,27 @@ main video {
 }
 
 #about {
-    grid-area: aside2;
+    grid-area: aside;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: flex-start;
     align-items: center;
-    background-color: aquamarine;
+    background-color: plum;
 }
 
 #mepic img {
     width: 150px;
 }
 
-#about:last-child {
-    flex-grow: 1;
+#about p {
+    padding: 20px;
 }
 
 footer {
     grid-area: footer;
     align-self: self-end;
     padding: 10px;
-    background-color: aquamarine;
+    background-color: plum;
 }
 
 /*Sten Sax Påse*/
@@ -131,7 +149,7 @@ footer {
 #adoptpetcanvas {
     height: 500px;
     width: 500px;
-    background-color: black;
+    background-color: white;
 }
 
 main form {
@@ -142,7 +160,7 @@ main form {
     height: 100px;
 }
 
-#submitbttn {
+#resetbttn {
     grid-area: 3/2/4/4;
     justify-self: center;
     width: 60px;
@@ -152,17 +170,21 @@ main form {
     #gridcontainer {
         grid-template-areas: 
             "header header header header"
-            "aside1 aside1 aside1 aside1"
             "main main main main"
-            "main main main main"
-            "main main main main"
-            "aside2 aside2 aside2 aside2"
-            "aside2 aside2 aside2 aside2"
+            "aside aside aside aside"
             "footer footer footer footer";
     }
 
-    #oatly {
-        transform: rotate(90deg);
+    header {
+        justify-content: start;
+    }
+
+    #navpc {
+        display: none;
+    }
+
+    #navmobile {
+        display: block;
     }
 
     #about {
