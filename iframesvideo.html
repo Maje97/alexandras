@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hazbin hotel och Helluva boss</title>
+    <link rel="stylesheet" href="stylesheet.css">
+</head>
+<body>
+    <div id="gridcontainer">
+        <header>
+            <nav id="navpc">
+                <p id="sitename">Alexandras</p>
+                <div id="navbttns">
+                    <a href="index.html" target="_self">Hem</a>
+                    <a href="stensaxpase.html" target="_self">Sten Sax Påse</a>
+                    <a href="adoptapet.html" target="_self">Kattspel</a>
+                    <a href="iframesvideo.html" target="_self">Videospelare</a>
+                </div>
+            </nav>
+
+            <nav id="navmobile">
+                <button onmouseenter="mobileMenu()" onclick="mobileMenu()" class="dropbtn"><img src="bilder/menu.png" alt="hamburgemeny"></button>
+                <div onmouseleave="eraseMenu()" class="droplinks"></div>
+            </nav>
+        </header>
+
+        <main>
+            <h1>Hazbin Hotel och Helluva Boss musikvideos</h1>
+            <div id="iframecontainer">
+                <img src="bilder/PinClipart.com_devil-horns-clip-art_5315648.png" alt="devil horns">
+                <div id="tvruta"></div>
+                <iframe id="iframejs" allowfullscreen></iframe>
+                <button id="menubttn" onclick="menuButton()">Meny</button>
+            </div>
+        </main>
+
+        <aside id="about">
+            <h2>Om videospelaren</h2>
+            <p>
+                Det är enklast att komma på idéer om man gör något som har med ens intresse att göra.<br><br>
+                Just nu råkar mitt intresse vara Vivziepops serier Hazbin Hotel och Helluva Boss så jag passade på att göra något med det.<br><br>
+                Resultatet blev en musikspelare gjord med iframes och javascript. 
+            </p>
+        </aside>
+
+        <footer>
+            <a href="https://www.flaticon.com/free-icons/ui" title="ui icons">Ui icons created by Fathema Khanom - Flaticon</a>
+            <a href="https://www.pinclipart.com/pindetail/iTwiwoi_clip-art-png-download/" title="clipart devil horns">Devil horns från Pinclipart</a>
+        </footer>
+    </div>
+
+    <script src="interactive.js"></script>
+    <script src="iframevideo.js"></script>
+</body>
+</html>
