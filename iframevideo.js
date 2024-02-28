@@ -3,19 +3,17 @@ const iframediv = document.getElementById('iframecontainer');
 
 const selectList = {
     name: [
-                "Hazbin Hotel - Hell is Forever", 
-                "Hazbin Hotel - Poison", 
-                "Hazbin Hotel - Hells Greatest Dad", 
-                "Hazbin Hotel - More Than Anything", 
-                "Hazbin Hotel - Stayed Gone", 
-                "Helluva Boss - 2 Minutes Notice",
-                "Helluva Boss - Crooked",
-                "Helluva Boss - Just Look My Way",
-                "Helluva Boss - Juggling iz Cool"
+                "Hell is Forever", 
+                "Hells Greatest Dad", 
+                "More Than Anything", 
+                "Stayed Gone", 
+                "2 Minutes Notice",
+                "Crooked",
+                "Just Look My Way",
+                "Juggling iz Cool"
             ],
     links: [
                 "https://www.youtube.com/embed/kMy8W0j-Slw?si=-SqomYuKqnILSmQq",
-                "https://www.youtube.com/embed/5adOotIvAps?si=fst3TNLtn_zJdMs9",
                 "https://www.youtube.com/embed/jNUTxvki_d0?si=7NH06AdnEGqslfam",
                 "https://www.youtube.com/embed/QzMHmnDwOz8?si=UXRAB2lwx1cXFZp4",
                 "https://www.youtube.com/embed/Ai4eh_OCxvw?si=7F8wFxaBfuGBKvCn",
@@ -38,6 +36,7 @@ function createSelection (){
     selection.style.width = "560px";
     selection.style.height = "315px";
     selection.style.display = "flex";
+    selection.style.flexWrap = "wrap";
     selection.style.flexDirection = "column";
     selection.style.alignItems = "center";
     selection.style.justifyContent = "space-around";
@@ -50,6 +49,8 @@ function createSelection (){
         videolink.style.color = "white";
         videolink.style.borderColor = "white";
         videolink.style.fontSize = "large";
+        videolink.style.width = "200px";
+        videolink.style.padding = "20px";
         videolink.style.cursor = "pointer";
         videolink.onclick = function(){
             iframe.src = selectList.links[i];
